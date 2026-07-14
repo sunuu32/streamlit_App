@@ -51,14 +51,9 @@ if len(selected) == 0:
 # -----------------------------
 @st.cache_data(ttl=3600)
 def load_stock(ticker):
-    df = yf.download(
-        ticker,
-        period="1y",
-        auto_adjust=True,
-        progress=False
-    )
+    stock = yf.Ticker(ticker)
+    df = stock.history(period="1y", auto_adjust=True)
     return df
-
 # -----------------------------
 # 주가 그래프
 # -----------------------------
