@@ -1,9 +1,7 @@
 streamlit
 google-api-python-client
 pandas
-plotly
 matplotlib
+seaborn
 wordcloud
-konlpy
-numpy
-Pillow
+kiwipiepy
